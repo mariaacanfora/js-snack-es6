@@ -30,25 +30,18 @@ const teamsList = [
     },
 ]
 
+let teamsPartialList = [];
 for (let i = 0; i < teamsList.length; i++) {
     const team = teamsList[i];
 
     team.points = randomNumber(0, 50); 
     team.fouls = randomNumber(0, 20);
-    
-}
-
-console.log(teamsList);
-
-let teamsPartialList = [];
-for (let i = 0; i < teamsList.length; i++) {
-    const team = teamsList[i];
 
     const {name, fouls} = team;
     teamsPartialList.push({name, fouls});
-    
 }
 
+console.log(teamsList);
 console.log(teamsPartialList);
 
 
